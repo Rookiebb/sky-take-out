@@ -53,4 +53,12 @@ public interface DishMapper {
      */
     @Delete("delete from dish where id = #{id}")
     void deleteById(Long id);
+    /**
+     * 根据菜品id查询对应的套餐id
+     *
+     * @param dishIds
+     * @return
+     */
+    //select setmeal_id from setmeal_dish where dish_id in (1,2,3,4)
+
 }
