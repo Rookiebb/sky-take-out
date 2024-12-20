@@ -60,5 +60,12 @@ public interface DishMapper {
      * @return
      */
     //select setmeal_id from setmeal_dish where dish_id in (1,2,3,4)
+    /**
+     * 根据id动态修改菜品数据
+     *
+     * @param dish
+     */
+    @AutoFill(value = OperationType.UPDATE)
+    void update(Dish dish);
 
 }
