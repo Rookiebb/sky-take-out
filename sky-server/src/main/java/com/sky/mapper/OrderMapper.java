@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Update;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface OrderMapper {
@@ -32,5 +33,9 @@ public interface OrderMapper {
             "WHERE id = #{id}")
     void update(Orders order);
 
-
+    /**
+     * 根据动态条件统计营业额
+     * @param map
+     */
+    Double sumByMap(Map map);
 }
